@@ -1,0 +1,9 @@
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  list-style: none;
+}
+ul li a {
+  text-decoration: none;
+}
