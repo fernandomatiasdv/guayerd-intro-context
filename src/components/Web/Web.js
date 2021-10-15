@@ -1,12 +1,13 @@
 import Header from "../Header/Header";
 import Main from "../Main/Main";
+import { ThemeProvider } from "../../contexts/ThemeContext";
 
 const Web = () => {
   return (
-    <>
-      <Header></Header>
-      <Main></Main>
-    </>
+    <ThemeProvider>
+      <Header />
+      <Main contenidoTitulo="Titulo" contenidoParrafo="Parrafo" />
+    </ThemeProvider>
   );
 };
 

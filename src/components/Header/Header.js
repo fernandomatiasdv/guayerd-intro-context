@@ -1,11 +1,18 @@
+import { useContext } from "react";
+import ThemeContext from "../../contexts/ThemeContext";
+
 import "./styles.css";
-const Header = (props) => {
+
+const Header = () => {
+  const { estilos, handleClickChangeTheme } = useContext(ThemeContext);
   return (
     <>
       <ul>
         <li>
           {" "}
-          <a href="#">Home</a>
+          <a href="#" style={estilos}>
+            Home
+          </a>
         </li>
         <li>
           {" "}
@@ -20,7 +27,7 @@ const Header = (props) => {
           <a href="#">Acerca</a>
         </li>
         <li>
-          <button>Dark mode</button>
+          <button onClick={() => handleClickChangeTheme()}>Dark mode</button>
         </li>
       </ul>
     </>
