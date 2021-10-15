@@ -1,11 +1,11 @@
 import Titulo from "../Titulo/Titulo";
 import Parrafo from "../Parrafo/Parrafo";
 
-const Main = () => {
+const Main = ({ contenidoTitulo, contenidoParrafo }) => {
   return (
     <>
-      <Titulo contenido="Este es el titulo" />
-      <Parrafo contenido="Este es el primer parrafo" />
+      <Titulo contenido={contenidoTitulo} />
+      <Parrafo contenido={contenidoParrafo} />
     </>
   );
 };

@@ -1,10 +1,13 @@
-import Parrafo from "../Parrafo/Parrafo";
+import { useContext } from "react";
+import ThemeContext from "../../contexts/ThemeContext";
 
 const Titulo = (props) => {
+  const { estilos } = useContext(ThemeContext);
+
   const { contenido } = props;
   return (
     <>
-      <Parrafo contenido={contenido} />
+      <h1 style={estilos}>{contenido}</h1>
     </>
   );
 };
